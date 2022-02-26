@@ -1,6 +1,8 @@
 # Nteract - minimal-jupyter-extension-app
 
 - this is Jupyter Notebook extesion app, this app have minimal config, not include nteract-monorepo
+- If you using the Jupyter-notebook-extension in nteract, doesn't require yarn to install the entire repo
+- I found the minimum way to set up a web pack
 
 - This Document written by Korean
 - If you are not Korean, Please Use English to Question (issues) or Contact to My Email
