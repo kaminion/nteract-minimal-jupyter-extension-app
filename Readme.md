@@ -2,10 +2,8 @@
 
 - this is Jupyter Notebook extesion app, this app have minimal config, not include nteract-monorepo
 
-This Document written by Korean
-If you are not Korean, Please
-
-Please Use English to Question (issues) or Contact to My Email
+- This Document written by Korean
+- If you are not Korean, Please Use English to Question (issues) or Contact to My Email
 
 ## Pre-required
 
