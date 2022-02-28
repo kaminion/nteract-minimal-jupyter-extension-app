@@ -27,14 +27,6 @@ export async function main(config: JupyterConfigData, rootEl: Element)
     // 필요한 부분 dispatch
     await Promise.all([
         store.dispatch(actions.fetchKernelspecs({ hostRef, kernelspecsRef })),
-        // store.dispatch(
-        //     actions.launchKernelByName({
-        //         contentRef,
-        //         kernelRef,
-        //         kernelSpecName: "python",
-        //         cwd: config.contentsPath,
-        //         selectNextKernel: true
-        //     })),
         store.dispatch(
             actions.fetchContent({
                 filepath: config.contentsPath,
@@ -45,8 +37,6 @@ export async function main(config: JupyterConfigData, rootEl: Element)
         )
         ]);
     })();
-
-    console.log('kernelRef:', kernelRef);
 
     ReactDOM.render(
         <Provider store={store}>

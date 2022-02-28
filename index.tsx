@@ -22,32 +22,6 @@ import "@nteract/styles/command-palette.css";
 import { JupyterConfigData, readConfig } from './src/utils/config';
 
 
-// store.dispatch(
-//     actions.fetchContentFulfilled({
-//         filepath: "/",
-//         model: {},
-//         kernelRef,
-//         contentRef
-//     })
-// );
-
-
-
-
-
-// store.dispatch(
-//     actions.fetchContent({
-//         filepath: "/",
-//         params: {},
-//         contentRef,
-//         kernelRef
-//     })
-// );
-
-
-
-
-
 // initalize: 렌더링 / 설정 불러옴
 const rootEl = document.getElementById('root');
 const dataEl = document.getElementById('jupyter-config-data');
@@ -62,6 +36,3 @@ if (!rootEl || !dataEl) {
         module.main(config, rootEl);
     })
 }
-
-
-
