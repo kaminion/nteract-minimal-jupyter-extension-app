@@ -3,9 +3,8 @@
 </a>
 
 # Nteract - minimal-jupyter-extension-app
-- this repo not official setup app
-- It is Jupyter Notebook extesion app, It have minimal config, not include nteract-monorepo
 - If you using the Jupyter-notebook-extension in nteract, **doesn't require yarn to install the entire repo**
+- It is Jupyter Notebook extesion app, It have minimal config, not include nteract-monorepo
 - I found the minimum way to setup a webpack !
 - **You should not installed Nteract MonoRepo** 
 
