@@ -1,7 +1,7 @@
 # Nteract - minimal-jupyter-extension-app
 
 - this is Jupyter Notebook extesion app, this app have minimal config, not include nteract-monorepo
-- If you using the Jupyter-notebook-extension in nteract, doesn't require yarn to install the entire repo
+- If you using the Jupyter-notebook-extension in nteract, **doesn't require yarn to install the entire repo**
 - I found the minimum way to setup a webpack
 - **You should not installed Nteract MonoRepo** 
 
@@ -11,18 +11,23 @@
 
 
 ## Pre-required
-- Pre-installed : Conda Or Have Jupyter Notebook
-- You have to skill : basic of react & Webpack Knowledge
+- Pre-installed : `Conda` Or `Have Jupyter Notebook Package`
+- You have to skill : basic of `react` & `Webpack` Knowledge
 - You can see the Other Setting Refer Usage Part of This Document
 - Or this link : (Enable to Jupyter-notebook server)[https://github.com/nteract/nteract/tree/main/applications/jupyter-extension]
 
 ## Usage
-1. Install the This Repo (JS)
+1. install `nteract_on_jupyer` with `pip`:
+```
+    pip install nteract_on_jupyter
+```
+
+2. Install the This Repo (JS)
 - At ther base Directory of the this repo install
 ```
     npm i
 ```
-2. install/enable `nteract_on_jupyter` (Supporting Python 3.X)
+3. install/enable `nteract_on_jupyter` (Supporting Python 3.X)
 - **Skip: If you have through to Nteract link, you can skip this part**
 - Install the Python Package locally from the `/extension` directory (you should see a setup.py here).
 ```
@@ -42,7 +47,7 @@
 - Example:
 ```
     npm run start
-    jupyter nteract --NteractConfig.asset_url="http://localhost:10600"
+    jupyter nteract --NteractConfig.asset_url="http://127.0.0.1:10600"
 ```
 - The `--NteractConfig.asset_url` flag tells the Jupyter server where the webpack server will be serving the assets.
 

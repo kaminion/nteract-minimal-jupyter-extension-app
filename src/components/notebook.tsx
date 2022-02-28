@@ -2,7 +2,6 @@ import React from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { Dispatch } from 'react';
 import { actions, ContentRef, createContentRef, createKernelRef, KernelRef } from '@nteract/core';
-import { createNotebookModel } from '../utils/helpers';
 
 // 앱 로딩 시 아무것도 출력 안함
 const NotebookPlaceholder = (props: any) => null;
@@ -77,31 +76,29 @@ class Notebook extends React.PureComponent<Props, State> {
     }
 
     loadContent() {
-        const { contentRef, fetchContentFulfiled } = this.props;
+        // const { contentRef, fetchContentFulfiled } = this.props;
 
-        const notebook = createNotebookModel('/', '');
+        // if (contentRef === undefined) { 
 
-        if (contentRef === undefined) { 
+        //     console.log('uf');
 
-            console.log('uf');
-
-            const cr = createContentRef();
-            const kr = createKernelRef();
-            this.setState({
-                ...this.state,
-                contentRef: cr
-            });
+        //     const cr = createContentRef();
+        //     const kr = createKernelRef();
+        //     this.setState({
+        //         ...this.state,
+        //         contentRef: cr
+        //     });
             
-            fetchContentFulfiled('/', notebook, cr, kr);
+        //     fetchContentFulfiled('/', notebook, cr, kr);
             
-        } else {
+        // } else {
 
-            this.setState({
-                ...this.state,
-                contentRef: contentRef
-            });
+        //     this.setState({
+        //         ...this.state,
+        //         contentRef: contentRef
+        //     });
 
-        }
+        // }
 
     }
 
