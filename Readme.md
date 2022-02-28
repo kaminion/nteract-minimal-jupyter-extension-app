@@ -1,8 +1,12 @@
-# Nteract - minimal-jupyter-extension-app
+<a href="https://github.com/nteract/nteract/tree/main/applications/jupyter-extension">
+    <img src="https://cloud.githubusercontent.com/assets/836375/15271096/98e4c102-19fe-11e6-999a-a74ffe6e2000.gif" alt="nteract animated logo" style="text-align:center"/>
+</a>
 
-- this is Jupyter Notebook extesion app, this app have minimal config, not include nteract-monorepo
+# Nteract - minimal-jupyter-extension-app
+- this repo not official setup app
+- It is Jupyter Notebook extesion app, It have minimal config, not include nteract-monorepo
 - If you using the Jupyter-notebook-extension in nteract, **doesn't require yarn to install the entire repo**
-- I found the minimum way to setup a webpack
+- I found the minimum way to setup a webpack !
 - **You should not installed Nteract MonoRepo** 
 
 - This Document written by Korean
@@ -23,7 +27,7 @@
 ```
 
 2. Install the This Repo (JS)
-- At ther base Directory of the this repo install
+- At ther base Directory of the this repo(nteract-minimal-jupyter-extension-app) install
 ```
     npm i
 ```
