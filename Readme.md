@@ -2,7 +2,8 @@
     <img src="https://cloud.githubusercontent.com/assets/836375/15271096/98e4c102-19fe-11e6-999a-a74ffe6e2000.gif" alt="nteract animated logo" style="text-align:center"/>
 </a>
 
-# Nteract - minimal-jupyter-extension-app
+# Nteract-minimal-jupyter-extension-app &middot; [![Last Commit](https://shields.io/github/last-commit/kaminion/nteract-minimal-jupyter-extension-app)](https://github.com/kaminion/nteract-minimal-jupyter-extension-app) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/kaminion/nteract-minimal-jupyter-extension-app)
+
 - If you using the Jupyter-notebook-extension in nteract, **doesn't require yarn to install the entire repo**
 - It is Jupyter Notebook extesion app, It have minimal config, not include nteract-monorepo
 - **You should not installed Nteract MonoRepo** 
