@@ -1,3 +1,4 @@
 /node_modules
 /dist
 /nteract
+/extension/nteract_on_jupyter.egg-info
