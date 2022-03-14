@@ -16,15 +16,15 @@ interface ComponentProps {
 export const App: FC<ComponentProps> = ({ contentRef }: ComponentProps) => {
     return (
         <>
-            {/* <JupyterNotebook
-                contentRef={contentRef} /> */}
-            <Nav>
+            <JupyterNotebook
+                contentRef={contentRef} />
+            {/* <Nav>
                 <NavSection>
                     <img src=""/>
                 </NavSection>
             </Nav>
             <NotebookMenu contentRef={contentRef}/>
-            <Notebook contentRef={contentRef} />
+            <Notebook contentRef={contentRef} /> */}
         </>);
 }
 
