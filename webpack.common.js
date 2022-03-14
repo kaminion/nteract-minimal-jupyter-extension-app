@@ -9,11 +9,44 @@ const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 const configurator = require('@nteract/webpack-configurator');
 
+const isDevMode = process.env.NODE_ENV.includes('development');
+
+const plugins = [
+    new MiniCssExtractPlugin({
+        filename: "[contenthash].css",
+    }),
+    new HtmlWebpackPlugin({
+        template: "public/index.html",
+    }),
+    new webpack.ProvidePlugin({
+        process: "process/browser",
+    }),
+    new MonacoWebpackPlugin({
+        languages:["python"]
+    }),
+    new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
+    new LoadashModuleReplacementPlugin(),
+];
+
+const devServer = {
+    static: { publicPath: path.resolve(__dirname, "/nteract/static/dist") }, // 원래 publicPath: path.resolve(__dirname, "dist")
+    hot: true,
+    host: "127.0.0.1",
+    port: "10600",
+    open: true,
+    headers: { "Access-Control-Allow-Origin": "*" }
+};
+
+isDevMode ? plugins.push(new ReactRefreshPlugin()) : delete devServer;
+
+
 module.exports = {
     entry: "./index.tsx",
     mode: "development",
     output: {
-        publicPath: path.resolve(__dirname, "/nteract/static/dist"),
+        publicPath: isDevMode ? 
+        path.resolve(__dirname, "/nteract/static/dist") :
+        path.resolve(__dirname, "/dist"),
         filename: "app.js",
         chunkFilename: "chunks.[name].js",
     },
@@ -93,31 +126,9 @@ module.exports = {
             fs:false
         },
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[contenthash].css",
-        }),
-        new HtmlWebpackPlugin({
-            template: "public/index.html",
-        }),
-        new webpack.ProvidePlugin({
-            process: "process/browser",
-        }),
-        new MonacoWebpackPlugin({
-            languages:["python"]
-        }),
-        new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
-        new LoadashModuleReplacementPlugin(),
-        new ReactRefreshPlugin()
-    ],
+    // re-defined by Top.
+    plugins,
+    devServer,
     target: "web",
-    devServer: {
-        static: { publicPath: path.resolve(__dirname, "/nteract/static/dist") }, // 원래 publicPath: path.resolve(__dirname, "dist")
-        hot: true,
-        host: "127.0.0.1",
-        port: "10600",
-        open: true,
-        headers: { "Access-Control-Allow-Origin": "*" }
-    },
     devtool:"cheap-module-source-map"
 };

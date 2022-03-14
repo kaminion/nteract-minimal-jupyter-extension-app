@@ -1,17 +1,25 @@
 {
-  "name": "editor-test",
+  "name": "nteract-minimal-jupyter-extension",
   "version": "1.0.0",
-  "description": "",
+  "description": "If you using the Jupyter-notebook-extension in nteract, doesn't require yarn to install the entire repo",
   "main": "index.tsx",
   "scripts": {
     "clean": "rimraf lib dist",
     "prebuild": "npm run clean",
-    "start": "webpack-dev-server --config webpack.common.js",
-    "build": "webpack --config webpack.common.js"
+    "start": "cross-env NODE_ENV=development webpack serve --config webpack.common.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.common.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "nteract",
+    "jupyter",
+    "extension",
+    "Jupyter-extension",
+    "editor",
+    "react"
+  ],
+  "author": "kaminion",
+  "homepage": "https://github.com/kaminion/nteract-minimal-jupyter-extension-app",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "@babel/core": "^7.17.0",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
@@ -26,6 +34,7 @@
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
     "html-loader": "^3.1.0",
